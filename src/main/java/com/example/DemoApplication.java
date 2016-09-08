@@ -11,7 +11,7 @@ public class DemoApplication {
 
     @RequestMapping("/")
     @ResponseBody
-    String home() {
+    String home() throws Exception   {
     	String message = System.getenv("POWERED_BY");
         String hostname = java.net.InetAddress.getLocalHost().getHostName();
         if (message == null) {
