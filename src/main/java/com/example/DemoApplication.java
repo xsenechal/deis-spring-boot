@@ -12,7 +12,12 @@ public class DemoApplication {
     @RequestMapping("/")
     @ResponseBody
     String home() {
-      return "Hello World!";
+    	String message = System.getenv("POWERED_BY");
+        String hostname = java.net.InetAddress.getLocalHost().getHostName();
+        if (message == null) {
+            message = "Deis ff";
+        }
+        return "Powered by " + message + " - " + hostname;
     }
 
     public static void main(String[] args) {
