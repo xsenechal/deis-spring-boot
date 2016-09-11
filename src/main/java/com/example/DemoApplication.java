@@ -17,7 +17,7 @@ public class DemoApplication {
         if (message == null) {
             message = "Deis ff";
         }
-        return "Powered by " + message + " - " + hostname;
+        return "Powered by " + message + " - " + hostname + " with pleasure";
     }
 
     public static void main(String[] args) {
